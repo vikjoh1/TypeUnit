@@ -1,0 +1,4 @@
+public instance service Component::TestCaseTest.testRunning () is
+begin
+  null;
+end service;

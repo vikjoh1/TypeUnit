@@ -1,0 +1,11 @@
+define function TestCaseTest1:testRunning
+input
+output 
+
+#$DESCRIPTION
+#$END_DESCRIPTION
+
+begin
+  null;
+end service;
+enddefine

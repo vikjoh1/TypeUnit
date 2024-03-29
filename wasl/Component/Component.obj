@@ -1,0 +1,12 @@
+1,WasRun,WasRun,passive
+.wasRun,Boolean,(),##
+.name,Base_Text_Type,(),##
+.Current_State,Object_State_Type,(),## 
+
+2,TestCase,TestCase,active
+.name,Base_Text_Type,(),##
+.Current_State,Object_State_Type,(),## 
+
+3,TestCaseTest,TestCaseTest,passive
+.Current_State,Object_State_Type,(),## 
+

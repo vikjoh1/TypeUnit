@@ -1,0 +1,8 @@
+TestCase,0,Non_Existent,TestCase1,Cannot_Happen,0,NO_STATE,##
+TestCase,0,Non_Existent,TestCase2,Cannot_Happen,0,NO_STATE,##
+TestCase,1,Idle,TestCase1,TRANSITION,2,Running,##
+TestCase,1,Idle,TestCase2,Cannot_Happen,0,NO_STATE,##
+TestCase,2,Running,TestCase1,Cannot_Happen,0,NO_STATE,##
+TestCase,2,Running,TestCase2,TRANSITION,3,Completed,##
+TestCase,3,Completed,TestCase1,Cannot_Happen,0,NO_STATE,##
+TestCase,3,Completed,TestCase2,Cannot_Happen,0,NO_STATE,##

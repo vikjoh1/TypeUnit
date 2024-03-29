@@ -1,0 +1,2 @@
+R1,WasRun,A,conditionally,Is_a_type_of,one,TestCase,
+R1,TestCase,B,unconditionally,specializes_into,one,WasRun,

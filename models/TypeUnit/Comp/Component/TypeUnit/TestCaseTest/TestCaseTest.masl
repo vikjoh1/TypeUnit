@@ -1,0 +1,7 @@
+//! ACTIVITY BEGIN. 'a67aa2b4-a2f6-4fd5-b9e0-23d95741f627' DO NOT EDIT THIS LINE.
+public instance service Component::TestCaseTest.testRunning () is
+begin
+  null;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

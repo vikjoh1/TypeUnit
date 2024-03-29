@@ -1,0 +1,9 @@
+define function TestCase2:constructor
+input\
+	name:Base_Text_Type
+output 
+
+#$DESCRIPTION
+#$END_DESCRIPTION
+
+enddefine
