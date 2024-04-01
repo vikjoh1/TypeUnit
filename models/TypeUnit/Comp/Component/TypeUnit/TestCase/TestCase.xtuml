@@ -21,9 +21,9 @@ INSERT INTO O_TFR
 	0,
 	1);
 INSERT INTO O_TFR
-	VALUES ("6641b386-6fda-4ea7-8730-5f9e2e1a4ef3",
+	VALUES ("13bd687d-bd84-4ad7-b985-79a6b67aecbc",
 	"c3cea6f2-6706-4c01-bd9f-cfb21428d08d",
-	'constructor',
+	'setUp',
 	'',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
@@ -32,16 +32,7 @@ INSERT INTO O_TFR
 	'',
 	"6f93012e-4cc1-407b-9b29-ac41bc60fdab",
 	0,
-	2);
-INSERT INTO O_TPARM
-	VALUES ("ec94d3c2-4615-440e-bd5e-5735ecf7a795",
-	"6641b386-6fda-4ea7-8730-5f9e2e1a4ef3",
-	'name',
-	"ba5eda7a-def5-0000-0000-000000000004",
-	0,
-	'',
-	"00000000-0000-0000-0000-000000000000",
-	'');
+	3);
 INSERT INTO O_NBATTR
 	VALUES ("2ec18765-75cb-4f32-a5fc-504e65fe0d04",
 	"c3cea6f2-6706-4c01-bd9f-cfb21428d08d");

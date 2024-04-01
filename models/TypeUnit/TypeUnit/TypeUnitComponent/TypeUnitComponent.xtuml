@@ -28,7 +28,7 @@ INSERT INTO GD_MD
 	0,
 	0,
 	0,
-	'',
+	'4.1.17',
 	'TypeUnit::TypeUnit::TypeUnitComponent');
 INSERT INTO GD_GE
 	VALUES ("fe67ac98-af0a-49a2-8b09-8181aa5c269c",
