@@ -1,0 +1,131 @@
+
+=====================================================================================================
+Exporting WASL for Comp...
+[/C:/xtuml/BridgePoint//tools/mc/bin\x2m, -i, C:\xtuml\BridgePoint\workspace\TypeUnit, -d, Comp, -P]
+[/C:/xtuml/BridgePoint//tools/mc/bin\masl, -i, C:\xtuml\BridgePoint\workspace\TypeUnit, -d, Comp, -o, C:\xtuml\BridgePoint\workspace\TypeUnit\wasl\, -a, WASL]
+103 ___ info ___ Loading marking data.
+103 ___ info ___ Starting domain.
+104 ___ info ___ Done.
+83 ___ failure ___ no parent element for: [ domain, Comp, , , , , , ,  ]
+82 ___ stack_trace ___ outputting element stack:
+82 ___ stack_trace ___ done.
+101 ___ info ___ rendering terminator list
+102 ___ info ___ rendering domain hand code file list
+103 ___ info ___ rendering scenario list
+104 ___ info ___ rendering function list
+106 ___ info ___ rendering objects
+108 ___ info ___ rendering regular relationships
+109 ___ info ___ rendering sub/super relationships
+110 ___ info ___ rendering polymorphic events file
+111 ___ info ___ rendering polymorphic events test file
+112 ___ info ___ rendering state transition tables
+113 ___ info ___ rendering event data
+114 ___ info ___ rendering types
+115 ___ info ___ rendering activity definition files
+121 ___ info ___ rendering domain dump file
+122 ___ info ___ rendering requirements file
+101 ___ info ___ rendering terminator list
+102 ___ info ___ rendering domain hand code file list
+103 ___ info ___ rendering scenario list
+104 ___ info ___ rendering function list
+106 ___ info ___ rendering objects
+108 ___ info ___ rendering regular relationships
+109 ___ info ___ rendering sub/super relationships
+110 ___ info ___ rendering polymorphic events file
+111 ___ info ___ rendering polymorphic events test file
+112 ___ info ___ rendering state transition tables
+113 ___ info ___ rendering event data
+114 ___ info ___ rendering types
+115 ___ info ___ rendering activity definition files
+121 ___ info ___ rendering domain dump file
+122 ___ info ___ rendering requirements file
+Done. 2024-04-02T20:06:30.683962
+
+=====================================================================================================
+Exporting WASL for TypeUnitComponent...
+[/C:/xtuml/BridgePoint//tools/mc/bin\x2m, -i, C:\xtuml\BridgePoint\workspace\TypeUnit, -d, TypeUnitComponent, -P]
+[/C:/xtuml/BridgePoint//tools/mc/bin\masl, -i, C:\xtuml\BridgePoint\workspace\TypeUnit, -d, TypeUnitComponent, -o, C:\xtuml\BridgePoint\workspace\TypeUnit\wasl\, -a, WASL]
+103 ___ info ___ Loading marking data.
+103 ___ info ___ Starting domain.
+104 ___ info ___ Done.
+101 ___ info ___ rendering terminator list
+102 ___ info ___ rendering domain hand code file list
+103 ___ info ___ rendering scenario list
+104 ___ info ___ rendering function list
+106 ___ info ___ rendering objects
+108 ___ info ___ rendering regular relationships
+109 ___ info ___ rendering sub/super relationships
+110 ___ info ___ rendering polymorphic events file
+111 ___ info ___ rendering polymorphic events test file
+112 ___ info ___ rendering state transition tables
+113 ___ info ___ rendering event data
+114 ___ info ___ rendering types
+115 ___ info ___ rendering activity definition files
+121 ___ info ___ rendering domain dump file
+122 ___ info ___ rendering requirements file
+Done. 2024-04-02T20:06:30.794960500
+
+=====================================================================================================
+Exporting WASL for TestRunner...
+[/C:/xtuml/BridgePoint//tools/mc/bin\x2m, -i, C:\xtuml\BridgePoint\workspace\TypeUnit, -d, TestRunner, -P]
+[/C:/xtuml/BridgePoint//tools/mc/bin\masl, -i, C:\xtuml\BridgePoint\workspace\TypeUnit, -d, TestRunner, -o, C:\xtuml\BridgePoint\workspace\TypeUnit\wasl\, -a, WASL]
+103 ___ info ___ Loading marking data.
+103 ___ info ___ Starting domain.
+104 ___ info ___ Done.
+101 ___ info ___ rendering terminator list
+102 ___ info ___ rendering domain hand code file list
+103 ___ info ___ rendering scenario list
+104 ___ info ___ rendering function list
+106 ___ info ___ rendering objects
+108 ___ info ___ rendering regular relationships
+109 ___ info ___ rendering sub/super relationships
+110 ___ info ___ rendering polymorphic events file
+111 ___ info ___ rendering polymorphic events test file
+112 ___ info ___ rendering state transition tables
+113 ___ info ___ rendering event data
+114 ___ info ___ rendering types
+115 ___ info ___ rendering activity definition files
+121 ___ info ___ rendering domain dump file
+122 ___ info ___ rendering requirements file
+Done. 2024-04-02T20:06:30.902536300
+
+=====================================================================================================
+Exporting WASL for Component...
+[/C:/xtuml/BridgePoint//tools/mc/bin\x2m, -i, C:\xtuml\BridgePoint\workspace\TypeUnit, -d, Component, -P]
+[/C:/xtuml/BridgePoint//tools/mc/bin\masl, -i, C:\xtuml\BridgePoint\workspace\TypeUnit, -d, Component, -o, C:\xtuml\BridgePoint\workspace\TypeUnit\wasl\, -a, WASL]
+103 ___ info ___ Loading marking data.
+103 ___ info ___ Starting domain.
+104 ___ info ___ Done.
+101 ___ info ___ rendering terminator list
+102 ___ info ___ rendering domain hand code file list
+103 ___ info ___ rendering scenario list
+104 ___ info ___ rendering function list
+106 ___ info ___ rendering objects
+107 ___ info ___ rendering object:  WasRun
+107 ___ info ___ rendering object:  TestCase
+107 ___ info ___ rendering object:  TestCaseTest
+108 ___ info ___ rendering regular relationships
+109 ___ info ___ rendering sub/super relationships
+110 ___ info ___ rendering polymorphic events file
+111 ___ info ___ rendering polymorphic events test file
+112 ___ info ___ rendering state transition tables
+113 ___ info ___ rendering event data
+114 ___ info ___ rendering types
+115 ___ info ___ rendering activity definition files
+117 ___ info ___ rendering scenario activity file:  Component_Scenario1.scn
+117 ___ info ___ rendering scenario activity file:  Component_Scenario2.scn
+117 ___ info ___ rendering scenario activity file:  Component_Scenario3.scn
+119 ___ info ___ rendering activity file:  Component_WasRun1_run.fn
+119 ___ info ___ rendering activity file:  Component_WasRun3_setUp.fn
+120 ___ info ___ rendering state action:  Component_WasRun_1
+120 ___ info ___ rendering state action:  Component_WasRun_2
+120 ___ info ___ rendering state action:  Component_WasRun_3
+120 ___ info ___ rendering state action:  Component_WasRun_4
+119 ___ info ___ rendering activity file:  Component_TestCase1_run.fn
+119 ___ info ___ rendering activity file:  Component_TestCase3_setUp.fn
+120 ___ info ___ rendering state action:  Component_TestCase_2
+120 ___ info ___ rendering state action:  Component_TestCase_3
+119 ___ info ___ rendering activity file:  Component_TestCaseTest1_testRunning.fn
+121 ___ info ___ rendering domain dump file
+122 ___ info ___ rendering requirements file
+Done. 2024-04-02T20:06:31.028073200
