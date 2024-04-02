@@ -42,9 +42,16 @@ typedef class Component_TestCaseTest Component_TestCaseTest;
 #include "Component_WasRun_class.h"
 #include "Component_TestCase_class.h"
 #include "Component_TestCaseTest_class.h"
+/*
+ * roll-up of all events (with their parameters) for component Component
+ */
+typedef union {
+  Component_WasRun_Events_u Component_WasRun_Events_u_namespace;
+} Component_DomainEvents_u;
+
 class Component : public xtuml_module, public sys_factory, public sys_events {
   public:
-  Component( xtuml_module_name name ) : xtuml_module( name ), sys_factory(SYS_MAX_CONTAINERS), sys_events(sizeof(0), ESCHER_SYS_MAX_XTUML_EVENTS, NUM_OF_XTUML_CLASS_THREADS)  {
+  Component( xtuml_module_name name ) : xtuml_module( name ), sys_factory(SYS_MAX_CONTAINERS) {
     for ( int cn=0; cn < Component_MAX_CLASS_NUMBERS; ++cn ) {
       Escher_ClassFactoryInit( 0, cn );
     }
@@ -55,11 +62,9 @@ class Component : public xtuml_module, public sys_factory, public sys_events {
 
   public:
     virtual Escher_Extent_t * Escher_GetDCI( const Escher_ClassNumber_t cn ) { return Component_class_info[cn]; }
-    virtual EventTaker_t * Escher_GetEventDispatcher( void ) { return Component_EventDispatcher; }
 
   private:
     static Escher_Extent_t * const Component_class_info[];
-    static EventTaker_t Component_EventDispatcher[];
 };
 
 

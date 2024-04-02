@@ -16,7 +16,10 @@
 void
 Component_WasRun::Component_WasRun_op_run( Component_WasRun * self, Component * thismodule)
 {
-
+  Component_WasRun * v_Test;
+  /* CREATE OBJECT INSTANCE Test OF WasRun */
+  XTUML_OAL_STMT_TRACE( 1, "CREATE OBJECT INSTANCE Test OF WasRun" );
+  v_Test = (Component_WasRun *) thismodule->Escher_CreateInstance( Component_DOMAIN_ID, Component_WasRun_CLASS_NUMBER );
 }
 
 /*
@@ -96,7 +99,9 @@ Component_WasRun_act4( Component_WasRun * self, const Escher_xtUMLEvent_t * cons
 }
 
 
-
+const Escher_xtUMLEventConstant_t Component_WasRunevent2c = {
+  Component_DOMAIN_ID, Component_WasRun_CLASS_NUMBER, COMPONENT_WASRUNEVENT2NUM,
+  ESCHER_IS_INSTANCE_EVENT, 0 };
 
 
 
@@ -107,17 +112,17 @@ Component_WasRun_act4( Component_WasRun * self, const Escher_xtUMLEvent_t * cons
  * Row zero is the uninitialized state (e.g., for creation event transitions).
  * Column index is (MC enumerated) state machine events.
  */
-static const Escher_SEMcell_t Component_WasRun_StateEventMatrix[ 4 + 1 ][ 0 ] = {
+static const Escher_SEMcell_t Component_WasRun_StateEventMatrix[ 4 + 1 ][ 1 ] = {
   /* row 0:  uninitialized state (for creation events) */
-  {  },
+  { EVENT_CANT_HAPPEN },
   /* row 1:  Component_WasRun_STATE_1 (NotRun) */
-  {  },
+  { Component_WasRun_STATE_2 },
   /* row 2:  Component_WasRun_STATE_2 (Running) */
-  {  },
+  { EVENT_CANT_HAPPEN },
   /* row 3:  Component_WasRun_STATE_3 (Passed) */
-  {  },
+  { EVENT_CANT_HAPPEN },
   /* row 4:  Component_WasRun_STATE_4 (Failed) */
-  {  }
+  { EVENT_CANT_HAPPEN }
 };
 
   /*

@@ -40,8 +40,12 @@ extern sys_sets::Escher_Extent_t pG_Component_WasRun_extent;
  */
 /*
  * instance event:  WasRun2:'run'
- * warning:  Event is not used in application - no code generated.
  */
+typedef struct {
+  EVENT_BASE_ATTRIBUTE_LIST         /* base attributes of all event classes */
+  /* Note:  no supplemental data for this event */
+} Component_WasRunevent2;
+extern const Escher_xtUMLEventConstant_t Component_WasRunevent2c;
 /*
  * instance event:  WasRun3:'fail'
  * warning:  Event is not used in application - no code generated.
@@ -50,7 +54,12 @@ extern sys_sets::Escher_Extent_t pG_Component_WasRun_extent;
  * instance event:  WasRun4:'pass'
  * warning:  Event is not used in application - no code generated.
  */
-
+/*
+ * union of events targeted towards 'WasRun' state machine
+ */
+typedef union {
+  Component_WasRunevent2 wasrun2_1;  
+} Component_WasRun_Events_u;
 /*
  * enumeration of state model states for class
  */
@@ -61,6 +70,7 @@ extern sys_sets::Escher_Extent_t pG_Component_WasRun_extent;
 /*
  * enumeration of state model event numbers
  */
+#define COMPONENT_WASRUNEVENT2NUM 0  /* WasRun2:'run' */
 extern void Component_WasRun_Dispatch( Escher_xtUMLEvent_t * );
 
 

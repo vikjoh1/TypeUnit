@@ -26,11 +26,11 @@ Component.fnp
 $END_FUNCTION_DATA_TYPES
  
 $START_FUNCTIONS
+Component_TestCaseTest1_testRunning.fn
 Component_WasRun1_run.fn
 Component_WasRun3_setUp.fn
 Component_TestCase1_run.fn
 Component_TestCase3_setUp.fn
-Component_TestCaseTest1_testRunning.fn
 $END_FUNCTIONS
  
 $START_BRIDGE_DATA_TYPES

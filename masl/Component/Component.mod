@@ -1,7 +1,7 @@
 domain Component is
+  object TestCaseTest;
   object WasRun;
   object TestCase;
-  object TestCaseTest;
     private service refineTest (
     );
     private service wasRun (
@@ -10,6 +10,10 @@ domain Component is
     );
   relationship R1 is WasRun conditionally Is_a_type_of one TestCase,
     TestCase unconditionally specializes_into one WasRun;
+  object TestCaseTest is
+    public instance service testRunning (
+    );
+  end object;
   object WasRun is
     wasRun :   boolean;
     name :   string;
@@ -78,9 +82,5 @@ domain Component is
         execute => Cannot_Happen,
         finish => Cannot_Happen      ); 
     end transition;
-  end object;
-  object TestCaseTest is
-    public instance service testRunning (
-    );
   end object;
 end domain;
