@@ -1,7 +1,7 @@
 $START
 WasRun1;run;NO_INPUTS;NO_OUTPUTS
-WasRun2;constructor;name,Base_Text_Type;NO_OUTPUTS
-TestCaseTest1;testRunning;NO_INPUTS;NO_OUTPUTS
+WasRun3;setUp;NO_INPUTS;NO_OUTPUTS
 TestCase1;run;NO_INPUTS;NO_OUTPUTS
-TestCase2;constructor;name,Base_Text_Type;NO_OUTPUTS
+TestCase3;setUp;NO_INPUTS;NO_OUTPUTS
+TestCaseTest1;testRunning;NO_INPUTS;NO_OUTPUTS
 $END

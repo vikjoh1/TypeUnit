@@ -1,4 +1,4 @@
-define function WasRun2:constructor
+define scenario  Component_Scenario2
 input\
 	name:Base_Text_Type
 output 

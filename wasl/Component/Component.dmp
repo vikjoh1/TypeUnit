@@ -12,7 +12,14 @@ Component.hcf
 $END_HAND_CODED_FILES
  
 $START_SCENARIOS
+Component,1,refineTest,1,Component_Scenario1.scn
+Component,1,wasRun,2,Component_Scenario2.scn
+Component,1,run,3,Component_Scenario3.scn
 $END_SCENARIOS
+ 
+$START_SCENARIO_LIST
+Component.scn
+$END_SCENARIO_LIST
  
 $START_FUNCTION_DATA_TYPES
 Component.fnp
@@ -20,10 +27,10 @@ $END_FUNCTION_DATA_TYPES
  
 $START_FUNCTIONS
 Component_WasRun1_run.fn
-Component_WasRun2_constructor.fn
-Component_TestCaseTest1_testRunning.fn
+Component_WasRun3_setUp.fn
 Component_TestCase1_run.fn
-Component_TestCase2_constructor.fn
+Component_TestCase3_setUp.fn
+Component_TestCaseTest1_testRunning.fn
 $END_FUNCTIONS
  
 $START_BRIDGE_DATA_TYPES
@@ -51,6 +58,10 @@ Component.pme_test
 $END_
  
 $START_ACTION_LIST
+Component_WasRun_1.al
+Component_WasRun_2.al
+Component_WasRun_3.al
+Component_WasRun_4.al
 Component_TestCase_2.al
 Component_TestCase_3.al
 $END_ACTION_LIST

@@ -1,0 +1,8 @@
+define scenario  Component_Scenario3
+input
+output 
+
+#$DESCRIPTION
+#$END_DESCRIPTION
+
+enddefine

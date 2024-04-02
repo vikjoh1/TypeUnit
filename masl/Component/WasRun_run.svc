@@ -1,0 +1,2 @@
+public instance service Component::WasRun.run () is
+create object instance Test of WasRun;

@@ -1,4 +1,4 @@
-1,WasRun,WasRun,passive
+1,WasRun,WasRun,active
 .wasRun,Boolean,(),##
 .name,Base_Text_Type,(),##
 .Current_State,Object_State_Type,(),## 

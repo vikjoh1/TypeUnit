@@ -1,0 +1,8 @@
+define function TestCase3:setUp
+input
+output 
+
+#$DESCRIPTION
+#$END_DESCRIPTION
+
+enddefine

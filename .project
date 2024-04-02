@@ -16,6 +16,12 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<triggers>clean,full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>org.xtuml.bp.mc.masl.masl_builder</name>
 			<arguments>
 			</arguments>
@@ -25,12 +31,22 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.xtuml.bp.core.xtumlnature</nature>
 		<nature>org.xtuml.bp.mc.docgennature</nature>
 		<nature>org.xtuml.bp.mc.masl.MCNature</nature>
 		<nature>org.xtuml.bp.mc.mc3020nature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.core.ccnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 		<nature>org.xtuml.bp.mc.wasl.MCNature</nature>
 	</natures>
 </projectDescription>

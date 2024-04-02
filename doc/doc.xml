@@ -64,6 +64,22 @@ Notes -
 </figure>
 </literallayout></para>
 <section>
+<title>Comp</title>
+<subtitle>Component</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-Comp-Component-TypeUnit-Comp-ComponentDiagram-figure'>
+<title id='TypeUnit-Comp-Component-TypeUnit-Comp-ComponentDiagram-figure-title'>Comp Component Diagram</title>
+<mediaobject><imageobject>
+<imagedata fileref='images/TypeUnit-Comp-Component-TypeUnit-Comp-Component Diagram.png' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</figure>
+</literallayout></para>
+<section>
+<title>Comp Packages</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'>Rendered here are the contained package diagrams.</literallayout></para>
+</section>
+</section>
+<section>
 <title>Classes</title>
 <subtitle></subtitle>
 <para><literallayout xml:space='preserve' class='monospaced'><table frame='all'>
@@ -86,6 +102,469 @@ Notes -
 </row>
 </thead>
 <tbody>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Class.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>WasRun</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>current_state:state&lt;State_Model&gt;</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>name:string</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>wasRun:boolean</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Class.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>TestCase</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>current_state:state&lt;State_Model&gt;</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>name:string</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Class.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>TestCaseTest</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</literallayout></para>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-Comp-Component-TypeUnit-WasRun-InstanceStateMachine-figure'>
+<title id='TypeUnit-Comp-Component-TypeUnit-WasRun-InstanceStateMachine-figure-title'>TypeUnit WasRun Instance State Machine</title>
+<mediaobject><imageobject>
+<imagedata fileref='images/TypeUnit-Comp-Component-TypeUnit-WasRun-Instance State Machine.png' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</figure>
+</literallayout></para>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-Comp-Component-TypeUnit-TestCase-InstanceStateMachine-figure'>
+<title id='TypeUnit-Comp-Component-TypeUnit-TestCase-InstanceStateMachine-figure-title'>TypeUnit TestCase Instance State Machine</title>
+<mediaobject><imageobject>
+<imagedata fileref='images/TypeUnit-Comp-Component-TypeUnit-TestCase-Instance State Machine.png' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</figure>
+</literallayout></para>
+<section>
+<title>Class Activities</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'>Here are listings of all of the activies in the class and its state machine(s).</literallayout></para>
+<section>
+<title>Instance State Machine Actions</title>
+<subtitle></subtitle>
+</section>
+<section>
+<title>Class Operations</title>
+<subtitle></subtitle>
+<section>
+<title>TypeUnit:WasRun:  run</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>create object instance Test of WasRun;
+</programlisting></para>
+</section>
+</section>
+</section>
+<section>
+<title>Class Activities</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'>Here are listings of all of the activies in the class and its state machine(s).</literallayout></para>
+<section>
+<title>Instance State Machine Actions</title>
+<subtitle></subtitle>
+</section>
+<section>
+<title>Class Operations</title>
+<subtitle></subtitle>
+</section>
+</section>
+<section>
+<title>Class Activities</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'>Here are listings of all of the activies in the class and its state machine(s).</literallayout></para>
+<section>
+<title>Class Operations</title>
+<subtitle></subtitle>
+<section>
+<title>TypeUnit:TestCaseTest:  testRunning</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>begin
+  null;
+end service;
+</programlisting></para>
+</section>
+</section>
+</section>
+</section>
+<section>
+<title>Associations</title>
+<subtitle>Associations</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><table frame='all'>
+<title>TypeUnit</title>
+<tgroup cols='3' align='left' colsep='0' rowsep='0'>
+<thead>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Association.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>Name</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>Description</literallayout></para>
+</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Association.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>1</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</literallayout></para>
+</section>
+</section>
+<section>
+<title>Functions</title>
+<subtitle>Package</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-Comp-Component-Functions-PackageDiagram-figure'>
+<title id='TypeUnit-Comp-Component-Functions-PackageDiagram-figure-title'>Functions Package Diagram</title>
+<mediaobject><imageobject>
+<imagedata fileref='images/TypeUnit-Comp-Component-Functions-Package Diagram.png' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</figure>
+</literallayout></para>
+<section>
+<title>Functions</title>
+<subtitle>Functions</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><table frame='all'>
+<title>Functions</title>
+<tgroup cols='3' align='left' colsep='0' rowsep='0'>
+<thead>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>Name</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>Description</literallayout></para>
+</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>refineTest()</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>wasRun(name)</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>run()</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</literallayout></para>
+<section>
+<title>Function Activities</title>
+<subtitle></subtitle>
+<section>
+<title>refineTest</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>// Create instance of test
+create object instance tc of TestCase;
+tc.name = &quot;temp&quot;;
+</programlisting></para>
+</section>
+<section>
+<title>wasRun</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>create object instance wr of WasRun;
+wr.name = &quot;temp&quot;;
+wr.wasRun = false;
+</programlisting></para>
+</section>
+<section>
+<title>run</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>select any wr from WasRun;
+generate WasRun2:run() to wr;
+wr.wasRun = true;
+</programlisting></para>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+</section>
+<section>
+<title>TypeUnit</title>
+<subtitle>Package</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-TypeUnit-PackageDiagram-figure'>
+<title id='TypeUnit-TypeUnit-PackageDiagram-figure-title'>TypeUnit Package Diagram</title>
+<mediaobject><imageobject>
+<imagedata fileref='images/TypeUnit-TypeUnit-Package Diagram.png' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</figure>
+</literallayout></para>
+<section>
+<title>TestRunner</title>
+<subtitle>Component</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-TypeUnit-TestRunner-ComponentDiagram-figure'>
+<title id='TypeUnit-TypeUnit-TestRunner-ComponentDiagram-figure-title'>TestRunner Component Diagram</title>
+<mediaobject><imageobject>
+<imagedata fileref='images/TypeUnit-TypeUnit-TestRunner-Component Diagram.png' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</figure>
+</literallayout></para>
+<section>
+<title>TestRunner Packages</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'>Rendered here are the contained package diagrams.</literallayout></para>
+</section>
+</section>
+<section>
+<title>TypeUnitComponent</title>
+<subtitle>Component</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-TypeUnit-TypeUnitComponent-ComponentDiagram-figure'>
+<title id='TypeUnit-TypeUnit-TypeUnitComponent-ComponentDiagram-figure-title'>TypeUnitComponent Component Diagram</title>
+<mediaobject><imageobject>
+<imagedata fileref='images/TypeUnit-TypeUnit-TypeUnitComponent-Component Diagram.png' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</figure>
+</literallayout></para>
+<section>
+<title>TypeUnitComponent Packages</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'>Rendered here are the contained package diagrams.</literallayout></para>
+</section>
+</section>
+<section>
+<title>Comp</title>
+<subtitle>Component</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-TypeUnit-Comp-ComponentDiagram-figure'>
+<title id='TypeUnit-TypeUnit-Comp-ComponentDiagram-figure-title'>Comp Component Diagram</title>
+<mediaobject><imageobject>
+<imagedata fileref='images/TypeUnit-TypeUnit-Comp-Component Diagram.png' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</figure>
+</literallayout></para>
+<section>
+<title>Comp Packages</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'>Rendered here are the contained package diagrams.</literallayout></para>
+</section>
+</section>
+<section>
+<title>Classes</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><table frame='all'>
+<title>Classes</title>
+<tgroup cols='3' align='left' colsep='0' rowsep='0'>
+<thead>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Class.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>Name</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>Description</literallayout></para>
+</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Class.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>TestCase</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>current_state:state&lt;State_Model&gt;</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>name:string</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
 <row>
 <entry>
 <para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
@@ -142,59 +621,30 @@ Notes -
 <para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
 </entry>
 </row>
-<row>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
-<imagedata fileref='images/Class.gif' scalefit='1' width='100%'/>
-</imageobject></mediaobject>
-</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'>TestCase</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-</entry>
-</row>
-<row>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
-<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
-</imageobject></mediaobject>
-</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'>current_state:state&lt;State_Model&gt;</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-</entry>
-</row>
-<row>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
-<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
-</imageobject></mediaobject>
-</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'>name:string</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-</entry>
-</row>
 </tbody>
 </tgroup>
 </table>
 </literallayout></para>
-<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-Comp-Component-TypeUnit-TestCase-InstanceStateMachine-figure'>
-<title id='TypeUnit-Comp-Component-TypeUnit-TestCase-InstanceStateMachine-figure-title'>TypeUnit TestCase Instance State Machine</title>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-TypeUnit-TestCase-InstanceStateMachine-figure'>
+<title id='TypeUnit-TypeUnit-TestCase-InstanceStateMachine-figure-title'>TypeUnit TestCase Instance State Machine</title>
 <mediaobject><imageobject>
-<imagedata fileref='images/TypeUnit-Comp-Component-TypeUnit-TestCase-Instance State Machine.png' scalefit='1' width='100%'/>
+<imagedata fileref='images/TypeUnit-TypeUnit-TestCase-Instance State Machine.png' scalefit='1' width='100%'/>
 </imageobject></mediaobject>
 </figure>
 </literallayout></para>
+<section>
+<title>Class Activities</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'>Here are listings of all of the activies in the class and its state machine(s).</literallayout></para>
+<section>
+<title>Instance State Machine Actions</title>
+<subtitle></subtitle>
+</section>
+<section>
+<title>Class Operations</title>
+<subtitle></subtitle>
+</section>
+</section>
 <section>
 <title>Class Activities</title>
 <subtitle></subtitle>
@@ -220,19 +670,6 @@ Notes -
 end service;
 </programlisting></para>
 </section>
-</section>
-</section>
-<section>
-<title>Class Activities</title>
-<subtitle></subtitle>
-<para><literallayout xml:space='preserve' class='monospaced'>Here are listings of all of the activies in the class and its state machine(s).</literallayout></para>
-<section>
-<title>Instance State Machine Actions</title>
-<subtitle></subtitle>
-</section>
-<section>
-<title>Class Operations</title>
-<subtitle></subtitle>
 </section>
 </section>
 </section>
@@ -277,9 +714,6 @@ end service;
 </tgroup>
 </table>
 </literallayout></para>
-</section>
-</section>
-</section>
 </section>
 </section>
 </section>

@@ -5,4 +5,5 @@ output
 #$DESCRIPTION
 #$END_DESCRIPTION
 
+create object instance Test of WasRun;
 enddefine

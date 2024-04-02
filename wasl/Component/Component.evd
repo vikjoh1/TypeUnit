@@ -1,2 +1,6 @@
+WasRun,1,callConstructor,;,##
+WasRun,2,run,;,##
+WasRun,3,fail,;,##
+WasRun,4,pass,;,##
 TestCase,1,execute,;,##
 TestCase,2,finish,;,##
