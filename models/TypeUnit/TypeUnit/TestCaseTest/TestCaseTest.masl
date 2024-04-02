@@ -1,7 +1,0 @@
-//! ACTIVITY BEGIN. '914331c3-5876-437b-a10e-4783c9552324' DO NOT EDIT THIS LINE.
-public instance service ::TestCaseTest.testRunning () is
-begin
-  null;
-end service;
-//! ACTIVITY END. DO NOT EDIT THIS LINE.
-
