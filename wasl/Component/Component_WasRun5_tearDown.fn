@@ -1,0 +1,9 @@
+define function WasRun5:tearDown
+input
+output 
+
+#$DESCRIPTION
+#$END_DESCRIPTION
+
+self.log = self.log + "tearDown ";
+enddefine

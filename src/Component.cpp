@@ -14,47 +14,29 @@
  */
 
 /*
- * Domain Function:  refineTest
+ * Domain Function:  createTestCase
  */
 void
-Component::Component_refineTest()
+Component::Component_createTestCase()
 {
   Component * thismodule = this;
   Component_TestCase * v_tc;
   /* CREATE OBJECT INSTANCE tc OF TestCase */
   XTUML_OAL_STMT_TRACE( 1, "CREATE OBJECT INSTANCE tc OF TestCase" );
   v_tc = (Component_TestCase *) thismodule->Escher_CreateInstance( Component_DOMAIN_ID, Component_TestCase_CLASS_NUMBER );
-  /* ASSIGN tc.name = temp */
-  XTUML_OAL_STMT_TRACE( 1, "ASSIGN tc.name = temp" );
-  thismodule->Escher_strcpy( ((Component_TestCase *)xtUML_detect_empty_handle( v_tc, "TestCase", "tc.name" ))->name, "temp" );
+  /* ASSIGN tc.name = testMethod */
+  XTUML_OAL_STMT_TRACE( 1, "ASSIGN tc.name = testMethod" );
+  thismodule->Escher_strcpy( ((Component_TestCase *)xtUML_detect_empty_handle( v_tc, "TestCase", "tc.name" ))->name, "testMethod" );
+  /* tc.setUp() */
+  XTUML_OAL_STMT_TRACE( 1, "tc.setUp()" );
+  v_tc->Component_TestCase_op_setUp( v_tc,  thismodule);
 }
 
 /*
- * Domain Function:  run
+ * Domain Function:  createWasRun
  */
 void
-Component::Component_run()
-{
-  Component * thismodule = this;
-  Component_WasRun * v_wr=0;
-  /* SELECT any wr FROM INSTANCES OF WasRun */
-  XTUML_OAL_STMT_TRACE( 1, "SELECT any wr FROM INSTANCES OF WasRun" );
-  v_wr = (Component_WasRun *) Escher_SetGetAny( &pG_Component_WasRun_extent.active );
-  /* GENERATE WasRun2:run() TO wr */
-  XTUML_OAL_STMT_TRACE( 1, "GENERATE WasRun2:run() TO wr" );
-  { Escher_xtUMLEvent_t * e = thismodule->Escher_NewxtUMLEvent( v_wr, &Component_WasRunevent2c );
-    thismodule->Escher_SendEvent( e );
-  }
-  /* ASSIGN wr.wasRun = TRUE */
-  XTUML_OAL_STMT_TRACE( 1, "ASSIGN wr.wasRun = TRUE" );
-  ((Component_WasRun *)xtUML_detect_empty_handle( v_wr, "WasRun", "wr.wasRun" ))->wasRun = TRUE;
-}
-
-/*
- * Domain Function:  wasRun
- */
-void
-Component::Component_wasRun( c_t p_name[ESCHER_SYS_MAX_STRING_LEN] )
+Component::Component_createWasRun()
 {
   Component * thismodule = this;
   Component_WasRun * v_wr;
@@ -64,9 +46,12 @@ Component::Component_wasRun( c_t p_name[ESCHER_SYS_MAX_STRING_LEN] )
   /* ASSIGN wr.name = temp */
   XTUML_OAL_STMT_TRACE( 1, "ASSIGN wr.name = temp" );
   thismodule->Escher_strcpy( ((Component_WasRun *)xtUML_detect_empty_handle( v_wr, "WasRun", "wr.name" ))->name, "temp" );
-  /* ASSIGN wr.wasRun = FALSE */
-  XTUML_OAL_STMT_TRACE( 1, "ASSIGN wr.wasRun = FALSE" );
-  ((Component_WasRun *)xtUML_detect_empty_handle( v_wr, "WasRun", "wr.wasRun" ))->wasRun = FALSE;
+  /* wr.setUp() */
+  XTUML_OAL_STMT_TRACE( 1, "wr.setUp()" );
+  v_wr->Component_WasRun_op_setUp( v_wr,  thismodule);
+  /* wr.run() */
+  XTUML_OAL_STMT_TRACE( 1, "wr.run()" );
+  v_wr->Component_WasRun_op_run( v_wr,  thismodule);
 }
 /* xtUML class info (collections, sizes, etc.) */
 sys_sets::Escher_Extent_t * const Component::Component_class_info[ Component_MAX_CLASS_NUMBERS ] = {

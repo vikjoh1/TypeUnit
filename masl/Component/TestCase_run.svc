@@ -1,11 +1,4 @@
-define function TestCase1:run
-input\
-	result:component_ref
-output 
-
-#$DESCRIPTION
-#$END_DESCRIPTION
-
+public instance service Component::TestCase.run (        result : in component_ref) is
 result.testStarted();
 self.setUp();
 if (self.name == "testMethod") then
@@ -14,4 +7,3 @@ elif (self.name == "brokenTestMethod") then
 	self.brokenTestMethod();
 end if;
 self.tearDown();
-enddefine

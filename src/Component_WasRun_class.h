@@ -23,10 +23,14 @@ class Component_WasRun {
   /* application analysis class attributes */
   bool wasRun;  /* - wasRun */
   c_t name[ESCHER_SYS_MAX_STRING_LEN];  /* - name */
+  bool wasSetUp;  /* - wasSetUp */
+  c_t log[ESCHER_SYS_MAX_STRING_LEN];  /* - log */
   /* relationship storage */
   /* Note:  No storage needed for WasRun->TestCase[R1] */
   void Component_WasRun_op_run( Component_WasRun *, Component *);
   void Component_WasRun_op_setUp( Component_WasRun *, Component *);
+  void Component_WasRun_op_testMethod( Component_WasRun *, Component *);
+  void Component_WasRun_op_tearDown( Component_WasRun *, Component *);
 /* xtUML WARNING:  TestCase<-R1->WasRun never related!  */
 /* Note:  TestCase<-R1->WasRun unrelate accessor not needed */
 };

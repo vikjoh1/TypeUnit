@@ -14,12 +14,28 @@ INSERT INTO O_TFR
 	'',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
-	'',
+	'result.testStarted();
+self.setUp();
+if (self.name == "testMethod") then
+	self.testMethod();
+elif (self.name == "brokenTestMethod") then
+	self.brokenTestMethod();
+end if;
+self.tearDown();',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	0,
 	1);
+INSERT INTO O_TPARM
+	VALUES ("2bf216ed-1866-4963-b4ca-7096dcd65f4d",
+	"6f93012e-4cc1-407b-9b29-ac41bc60fdab",
+	'result',
+	"ba5eda7a-def5-0000-0000-00000000000d",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
 INSERT INTO O_TFR
 	VALUES ("13bd687d-bd84-4ad7-b985-79a6b67aecbc",
 	"c3cea6f2-6706-4c01-bd9f-cfb21428d08d",
@@ -33,6 +49,19 @@ INSERT INTO O_TFR
 	"6f93012e-4cc1-407b-9b29-ac41bc60fdab",
 	0,
 	3);
+INSERT INTO O_TFR
+	VALUES ("8c80fe5a-6e53-4772-a30e-b2ed3745c5cd",
+	"c3cea6f2-6706-4c01-bd9f-cfb21428d08d",
+	'tearDown',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	3,
+	'',
+	"13bd687d-bd84-4ad7-b985-79a6b67aecbc",
+	0,
+	4);
 INSERT INTO O_NBATTR
 	VALUES ("2ec18765-75cb-4f32-a5fc-504e65fe0d04",
 	"c3cea6f2-6706-4c01-bd9f-cfb21428d08d");

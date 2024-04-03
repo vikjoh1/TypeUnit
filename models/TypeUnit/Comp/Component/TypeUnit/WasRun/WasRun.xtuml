@@ -14,7 +14,13 @@ INSERT INTO O_TFR
 	'',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
-	'create object instance Test of WasRun;',
+	'select any wr from WasRun;
+generate WasRun2:run() to wr;
+if (self.name == "testMethod") then
+	self.testMethod();
+elif (self.name == "testBrokenMethod") then
+	self.testBrokenMethod();
+end if;',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000",
@@ -27,12 +33,38 @@ INSERT INTO O_TFR
 	'',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
-	'',
+	'self.log = "setUp ";',
 	1,
 	'',
 	"c6e2f158-db49-4246-ab09-8de4fb4b1e47",
 	0,
 	3);
+INSERT INTO O_TFR
+	VALUES ("5b926d75-4421-418b-913a-c7099af33fa3",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d",
+	'testMethod',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.log = self.log + "testMethod ";',
+	1,
+	'',
+	"84e1ac75-fa7b-4fa3-bca7-436972c5f0ec",
+	0,
+	4);
+INSERT INTO O_TFR
+	VALUES ("d62667e0-241f-4936-b768-efe195fab7c5",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d",
+	'tearDown',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.log = self.log + "tearDown ";',
+	1,
+	'',
+	"5b926d75-4421-418b-913a-c7099af33fa3",
+	0,
+	5);
 INSERT INTO O_NBATTR
 	VALUES ("6dcf4b7c-8e8f-402e-ab41-b368eb083510",
 	"eb13984d-bc2a-446d-9fc1-6c735620090d");
@@ -85,6 +117,42 @@ INSERT INTO O_ATTR
 	'current_state',
 	0,
 	"ba5eda7a-def5-0000-0000-000000000006",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("c659d5ed-6c9a-47a9-a93d-8aa2343fad21",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d");
+INSERT INTO O_BATTR
+	VALUES ("c659d5ed-6c9a-47a9-a93d-8aa2343fad21",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d");
+INSERT INTO O_ATTR
+	VALUES ("c659d5ed-6c9a-47a9-a93d-8aa2343fad21",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d",
+	"b634fdb5-409c-4342-ad0a-9cb09f227d44",
+	'wasSetUp',
+	'',
+	'',
+	'wasSetUp',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("09d1280d-c977-430c-b928-21b348d5dff0",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d");
+INSERT INTO O_BATTR
+	VALUES ("09d1280d-c977-430c-b928-21b348d5dff0",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d");
+INSERT INTO O_ATTR
+	VALUES ("09d1280d-c977-430c-b928-21b348d5dff0",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d",
+	"c659d5ed-6c9a-47a9-a93d-8aa2343fad21",
+	'log',
+	'',
+	'',
+	'log',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
 	'',
 	'');
 INSERT INTO O_ID

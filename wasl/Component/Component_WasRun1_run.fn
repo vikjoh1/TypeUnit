@@ -5,5 +5,11 @@ output
 #$DESCRIPTION
 #$END_DESCRIPTION
 
-create object instance Test of WasRun;
+select any wr from WasRun;
+generate WasRun2:run() to wr;
+if (self.name == "testMethod") then
+	self.testMethod();
+elif (self.name == "testBrokenMethod") then
+	self.testBrokenMethod();
+end if;
 enddefine

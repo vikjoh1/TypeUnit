@@ -1,0 +1,2 @@
+public instance service Component::WasRun.testMethod () is
+self.log = self.log + "testMethod ";

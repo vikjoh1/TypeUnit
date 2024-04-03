@@ -24,8 +24,9 @@ class Component_TestCase {
   c_t name[ESCHER_SYS_MAX_STRING_LEN];  /* - name */
   /* relationship storage */
   /* Note:  No storage needed for TestCase->WasRun[R1] */
-  void Component_TestCase_op_run( Component_TestCase *, Component *);
+  void Component_TestCase_op_run( Component_TestCase *, Component *,  );
   void Component_TestCase_op_setUp( Component_TestCase *, Component *);
+  void Component_TestCase_op_tearDown( Component_TestCase *, Component *);
 
 };
 

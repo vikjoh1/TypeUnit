@@ -1,6 +1,8 @@
 1,WasRun,WasRun,active
 .wasRun,Boolean,(),##
 .name,Base_Text_Type,(),##
+.wasSetUp,Boolean,(),##
+.log,Base_Text_Type,(),##
 .Current_State,Object_State_Type,(),## 
 
 2,TestCase,TestCase,active

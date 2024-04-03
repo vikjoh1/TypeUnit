@@ -16,10 +16,24 @@
 void
 Component_WasRun::Component_WasRun_op_run( Component_WasRun * self, Component * thismodule)
 {
-  Component_WasRun * v_Test;
-  /* CREATE OBJECT INSTANCE Test OF WasRun */
-  XTUML_OAL_STMT_TRACE( 1, "CREATE OBJECT INSTANCE Test OF WasRun" );
-  v_Test = (Component_WasRun *) thismodule->Escher_CreateInstance( Component_DOMAIN_ID, Component_WasRun_CLASS_NUMBER );
+  Component_WasRun * v_wr=0;
+  /* SELECT any wr FROM INSTANCES OF WasRun */
+  XTUML_OAL_STMT_TRACE( 1, "SELECT any wr FROM INSTANCES OF WasRun" );
+  v_wr = (Component_WasRun *) Escher_SetGetAny( &pG_Component_WasRun_extent.active );
+  /* GENERATE WasRun2:run() TO wr */
+  XTUML_OAL_STMT_TRACE( 1, "GENERATE WasRun2:run() TO wr" );
+  { Escher_xtUMLEvent_t * e = thismodule->Escher_NewxtUMLEvent( v_wr, &Component_WasRunevent2c );
+    thismodule->Escher_SendEvent( e );
+  }
+  /* IF ( self.name == testMethod ) */
+  XTUML_OAL_STMT_TRACE( 1, "IF ( self.name == testMethod )" );
+  if ( thismodule->Escher_strcmp( ((Component_WasRun *)xtUML_detect_empty_handle( self, "WasRun", "self.name" ))->name, "testMethod" ) == 0 ) {
+    /* self.testMethod() */
+    XTUML_OAL_STMT_TRACE( 2, "self.testMethod()" );
+    self->Component_WasRun_op_testMethod( self,  thismodule);
+  }
+  else if ( thismodule->Escher_strcmp( ((Component_WasRun *)xtUML_detect_empty_handle( self, "WasRun", "self.name" ))->name, "testBrokenMethod" ) == 0 ) {
+  }
 }
 
 /*
@@ -28,7 +42,31 @@ Component_WasRun::Component_WasRun_op_run( Component_WasRun * self, Component * 
 void
 Component_WasRun::Component_WasRun_op_setUp( Component_WasRun * self, Component * thismodule)
 {
+  /* ASSIGN self.log = setUp  */
+  XTUML_OAL_STMT_TRACE( 1, "ASSIGN self.log = setUp " );
+  thismodule->Escher_strcpy( ((Component_WasRun *)xtUML_detect_empty_handle( self, "WasRun", "self.log" ))->log, "setUp " );
+}
 
+/*
+ * instance operation:  testMethod
+ */
+void
+Component_WasRun::Component_WasRun_op_testMethod( Component_WasRun * self, Component * thismodule)
+{
+  /* ASSIGN self.log = ( self.log + testMethod  ) */
+  XTUML_OAL_STMT_TRACE( 1, "ASSIGN self.log = ( self.log + testMethod  )" );
+  thismodule->Escher_strcpy( ((Component_WasRun *)xtUML_detect_empty_handle( self, "WasRun", "self.log" ))->log, ( thismodule->Escher_stradd( ((Component_WasRun *)xtUML_detect_empty_handle( self, "WasRun", "self.log" ))->log, "testMethod " ) ) );
+}
+
+/*
+ * instance operation:  tearDown
+ */
+void
+Component_WasRun::Component_WasRun_op_tearDown( Component_WasRun * self, Component * thismodule)
+{
+  /* ASSIGN self.log = ( self.log + tearDown  ) */
+  XTUML_OAL_STMT_TRACE( 1, "ASSIGN self.log = ( self.log + tearDown  )" );
+  thismodule->Escher_strcpy( ((Component_WasRun *)xtUML_detect_empty_handle( self, "WasRun", "self.log" ))->log, ( thismodule->Escher_stradd( ((Component_WasRun *)xtUML_detect_empty_handle( self, "WasRun", "self.log" ))->log, "tearDown " ) ) );
 }
 
 

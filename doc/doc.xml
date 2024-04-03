@@ -54,6 +54,97 @@ Notes -
 <subtitle></subtitle>
 <para><literallayout xml:space='preserve' class='monospaced'>Rendered here are the contained package diagrams.</literallayout></para>
 <section>
+<title>Functions</title>
+<subtitle>Package</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-Comp-Component-Functions-PackageDiagram-figure'>
+<title id='TypeUnit-Comp-Component-Functions-PackageDiagram-figure-title'>Functions Package Diagram</title>
+<mediaobject><imageobject>
+<imagedata fileref='images/TypeUnit-Comp-Component-Functions-Package Diagram.png' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</figure>
+</literallayout></para>
+<section>
+<title>Functions</title>
+<subtitle>Functions</subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'><table frame='all'>
+<title>Functions</title>
+<tgroup cols='3' align='left' colsep='0' rowsep='0'>
+<thead>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>Name</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>Description</literallayout></para>
+</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>createWasRun()</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>createTestCase()</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</literallayout></para>
+<section>
+<title>Function Activities</title>
+<subtitle></subtitle>
+<section>
+<title>createWasRun</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>create object instance wr of WasRun;
+wr.name = &quot;temp&quot;;
+wr.setUp();
+wr.run();
+</programlisting></para>
+</section>
+<section>
+<title>createTestCase</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>create object instance tc of TestCase;
+tc.name = &quot;testMethod&quot;;
+tc.setUp();
+tc.run();
+</programlisting></para>
+</section>
+</section>
+</section>
+</section>
+<section>
 <title>TypeUnit</title>
 <subtitle>Package</subtitle>
 <para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-Comp-Component-TypeUnit-PackageDiagram-figure'>
@@ -125,6 +216,34 @@ Notes -
 </entry>
 <entry>
 <para><literallayout xml:space='preserve' class='monospaced'>WasRun</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>log:string</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+</entry>
+</row>
+<row>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
+<imagedata fileref='images/Attribute.gif' scalefit='1' width='100%'/>
+</imageobject></mediaobject>
+</literallayout></para>
+</entry>
+<entry>
+<para><literallayout xml:space='preserve' class='monospaced'>wasSetUp:boolean</literallayout></para>
 </entry>
 <entry>
 <para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
@@ -265,7 +384,34 @@ end service;
 <title>TypeUnit:WasRun:  run</title>
 <subtitle></subtitle>
 <para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-<para><programlisting>create object instance Test of WasRun;
+<para><programlisting>select any wr from WasRun;
+generate WasRun2:run() to wr;
+if (self.name == &quot;testMethod&quot;) then
+	self.testMethod();
+elif (self.name == &quot;testBrokenMethod&quot;) then
+	self.testBrokenMethod();
+end if;
+</programlisting></para>
+</section>
+<section>
+<title>TypeUnit:WasRun:  setUp</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>self.log = &quot;setUp &quot;;
+</programlisting></para>
+</section>
+<section>
+<title>TypeUnit:WasRun:  testMethod</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>self.log = self.log + &quot;testMethod &quot;;
+</programlisting></para>
+</section>
+<section>
+<title>TypeUnit:WasRun:  tearDown</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>self.log = self.log + &quot;tearDown &quot;;
 </programlisting></para>
 </section>
 </section>
@@ -281,6 +427,20 @@ end service;
 <section>
 <title>Class Operations</title>
 <subtitle></subtitle>
+<section>
+<title>TypeUnit:TestCase:  run</title>
+<subtitle></subtitle>
+<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
+<para><programlisting>result.testStarted();
+self.setUp();
+if (self.name == &quot;testMethod&quot;) then
+	self.testMethod();
+elif (self.name == &quot;brokenTestMethod&quot;) then
+	self.brokenTestMethod();
+end if;
+self.tearDown();
+</programlisting></para>
+</section>
 </section>
 </section>
 </section>
@@ -325,118 +485,6 @@ end service;
 </tgroup>
 </table>
 </literallayout></para>
-</section>
-</section>
-<section>
-<title>Functions</title>
-<subtitle>Package</subtitle>
-<para><literallayout xml:space='preserve' class='monospaced'><figure id='TypeUnit-Comp-Component-Functions-PackageDiagram-figure'>
-<title id='TypeUnit-Comp-Component-Functions-PackageDiagram-figure-title'>Functions Package Diagram</title>
-<mediaobject><imageobject>
-<imagedata fileref='images/TypeUnit-Comp-Component-Functions-Package Diagram.png' scalefit='1' width='100%'/>
-</imageobject></mediaobject>
-</figure>
-</literallayout></para>
-<section>
-<title>Functions</title>
-<subtitle>Functions</subtitle>
-<para><literallayout xml:space='preserve' class='monospaced'><table frame='all'>
-<title>Functions</title>
-<tgroup cols='3' align='left' colsep='0' rowsep='0'>
-<thead>
-<row>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
-<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
-</imageobject></mediaobject>
-</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'>Name</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'>Description</literallayout></para>
-</entry>
-</row>
-</thead>
-<tbody>
-<row>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
-<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
-</imageobject></mediaobject>
-</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'>refineTest()</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-</entry>
-</row>
-<row>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
-<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
-</imageobject></mediaobject>
-</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'>wasRun(name)</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-</entry>
-</row>
-<row>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'><mediaobject><imageobject>
-<imagedata fileref='images/Function.gif' scalefit='1' width='100%'/>
-</imageobject></mediaobject>
-</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'>run()</literallayout></para>
-</entry>
-<entry>
-<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-</entry>
-</row>
-</tbody>
-</tgroup>
-</table>
-</literallayout></para>
-<section>
-<title>Function Activities</title>
-<subtitle></subtitle>
-<section>
-<title>refineTest</title>
-<subtitle></subtitle>
-<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-<para><programlisting>// Create instance of test
-create object instance tc of TestCase;
-tc.name = &quot;temp&quot;;
-</programlisting></para>
-</section>
-<section>
-<title>wasRun</title>
-<subtitle></subtitle>
-<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-<para><programlisting>create object instance wr of WasRun;
-wr.name = &quot;temp&quot;;
-wr.wasRun = false;
-</programlisting></para>
-</section>
-<section>
-<title>run</title>
-<subtitle></subtitle>
-<para><literallayout xml:space='preserve' class='monospaced'></literallayout></para>
-<para><programlisting>select any wr from WasRun;
-generate WasRun2:run() to wr;
-wr.wasRun = true;
-</programlisting></para>
-</section>
-</section>
 </section>
 </section>
 </section>

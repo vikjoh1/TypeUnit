@@ -12,9 +12,8 @@ Component.hcf
 $END_HAND_CODED_FILES
  
 $START_SCENARIOS
-Component,1,refineTest,1,Component_Scenario1.scn
-Component,1,wasRun,2,Component_Scenario2.scn
-Component,1,run,3,Component_Scenario3.scn
+Component,1,createWasRun,2,Component_Scenario2.scn
+Component,1,createTestCase,3,Component_Scenario3.scn
 $END_SCENARIOS
  
 $START_SCENARIO_LIST
@@ -29,8 +28,11 @@ $START_FUNCTIONS
 Component_TestCaseTest1_testRunning.fn
 Component_WasRun1_run.fn
 Component_WasRun3_setUp.fn
+Component_WasRun4_testMethod.fn
+Component_WasRun5_tearDown.fn
 Component_TestCase1_run.fn
 Component_TestCase3_setUp.fn
+Component_TestCase4_tearDown.fn
 $END_FUNCTIONS
  
 $START_BRIDGE_DATA_TYPES

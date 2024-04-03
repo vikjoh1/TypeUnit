@@ -1,6 +1,5 @@
 define scenario  Component_Scenario2
-input\
-	name:Base_Text_Type
+input
 output 
 
 #$DESCRIPTION

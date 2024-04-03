@@ -56,9 +56,8 @@ class Component : public xtuml_module, public sys_factory, public sys_events {
       Escher_ClassFactoryInit( 0, cn );
     }
   }
-  void Component_refineTest( void );
-  void Component_run( void );
-  void Component_wasRun( c_t[ESCHER_SYS_MAX_STRING_LEN] );
+  void Component_createTestCase( void );
+  void Component_createWasRun( void );
 
   public:
     virtual Escher_Extent_t * Escher_GetDCI( const Escher_ClassNumber_t cn ) { return Component_class_info[cn]; }

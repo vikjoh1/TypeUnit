@@ -1,0 +1,2 @@
+public instance service Component::WasRun.setUp () is
+self.log = "setUp ";

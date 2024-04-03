@@ -2,6 +2,9 @@ $START
 TestCaseTest1;testRunning;NO_INPUTS;NO_OUTPUTS
 WasRun1;run;NO_INPUTS;NO_OUTPUTS
 WasRun3;setUp;NO_INPUTS;NO_OUTPUTS
-TestCase1;run;NO_INPUTS;NO_OUTPUTS
+WasRun4;testMethod;NO_INPUTS;NO_OUTPUTS
+WasRun5;tearDown;NO_INPUTS;NO_OUTPUTS
+TestCase1;run;result,component_ref;NO_OUTPUTS
 TestCase3;setUp;NO_INPUTS;NO_OUTPUTS
+TestCase4;tearDown;NO_INPUTS;NO_OUTPUTS
 $END

@@ -34,67 +34,41 @@ INSERT INTO DIM_DIA
 	0.000000,
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO S_SYNC
-	VALUES ("47c8f4ed-0331-4a1e-a9bb-5284053be5b5",
+	VALUES ("516752ea-fd88-4bc0-88d1-6acd6a10e77e",
 	"00000000-0000-0000-0000-000000000000",
-	'refineTest',
-	'',
-	'// Create instance of test
-create object instance tc of TestCase;
-tc.name = "temp";',
-	"ba5eda7a-def5-0000-0000-000000000000",
-	1,
-	'',
-	0,
-	1);
-INSERT INTO PE_PE
-	VALUES ("47c8f4ed-0331-4a1e-a9bb-5284053be5b5",
-	1,
-	"bb4060ca-60db-4b67-88b9-a767e88d5489",
-	"00000000-0000-0000-0000-000000000000",
-	1);
-INSERT INTO S_SYNC
-	VALUES ("287fa7b6-4789-4a0e-8fd6-bb1885c9b8ec",
-	"00000000-0000-0000-0000-000000000000",
-	'wasRun',
+	'createWasRun',
 	'',
 	'create object instance wr of WasRun;
 wr.name = "temp";
-wr.wasRun = false;',
+wr.setUp();
+wr.run();',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
 	0,
 	2);
-INSERT INTO S_SPARM
-	VALUES ("1095db89-54f1-4f72-808a-cefad8e6e749",
-	"287fa7b6-4789-4a0e-8fd6-bb1885c9b8ec",
-	'name',
-	"ba5eda7a-def5-0000-0000-000000000004",
-	0,
-	'',
-	"00000000-0000-0000-0000-000000000000",
-	'');
 INSERT INTO PE_PE
-	VALUES ("287fa7b6-4789-4a0e-8fd6-bb1885c9b8ec",
+	VALUES ("516752ea-fd88-4bc0-88d1-6acd6a10e77e",
 	1,
 	"bb4060ca-60db-4b67-88b9-a767e88d5489",
 	"00000000-0000-0000-0000-000000000000",
 	1);
 INSERT INTO S_SYNC
-	VALUES ("5e87e83f-9063-4bd0-87de-6b40b180aee1",
+	VALUES ("a071dfd3-aeb0-40c3-b3e0-20a3a8e3c6d8",
 	"00000000-0000-0000-0000-000000000000",
-	'run',
+	'createTestCase',
 	'',
-	'select any wr from WasRun;
-generate WasRun2:run() to wr;
-wr.wasRun = true;',
+	'create object instance tc of TestCase;
+tc.name = "testMethod";
+tc.setUp();
+tc.run();',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
 	0,
 	3);
 INSERT INTO PE_PE
-	VALUES ("5e87e83f-9063-4bd0-87de-6b40b180aee1",
+	VALUES ("a071dfd3-aeb0-40c3-b3e0-20a3a8e3c6d8",
 	1,
 	"bb4060ca-60db-4b67-88b9-a767e88d5489",
 	"00000000-0000-0000-0000-000000000000",

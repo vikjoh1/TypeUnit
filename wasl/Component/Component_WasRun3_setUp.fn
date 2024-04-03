@@ -5,4 +5,5 @@ output
 #$DESCRIPTION
 #$END_DESCRIPTION
 
+self.log = "setUp ";
 enddefine

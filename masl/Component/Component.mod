@@ -2,11 +2,9 @@ domain Component is
   object TestCaseTest;
   object WasRun;
   object TestCase;
-    private service refineTest (
+    private service createWasRun (
     );
-    private service wasRun (
-        name : in string    );
-    private service run (
+    private service createTestCase (
     );
   relationship R1 is WasRun conditionally Is_a_type_of one TestCase,
     TestCase unconditionally specializes_into one WasRun;
@@ -17,9 +15,15 @@ domain Component is
   object WasRun is
     wasRun :   boolean;
     name :   string;
+    wasSetUp :   boolean;
+    log :   string;
     public instance service run (
     );
     public instance service setUp (
+    );
+    public instance service testMethod (
+    );
+    public instance service tearDown (
     );
     creation state NotRun();
      state Running();
@@ -60,8 +64,10 @@ domain Component is
   object TestCase is
     name :   string;
     public instance service run (
-    );
+        result : in component_ref    );
     public instance service setUp (
+    );
+    public instance service tearDown (
     );
      state Idle();
      state Running();

@@ -14,9 +14,20 @@
  * instance operation:  run
  */
 void
-Component_TestCase::Component_TestCase_op_run( Component_TestCase * self, Component * thismodule)
+Component_TestCase::Component_TestCase_op_run( Component_TestCase * self, Component * thismodule,  p_result )
 {
-
+  /* self.setUp() */
+  XTUML_OAL_STMT_TRACE( 1, "self.setUp()" );
+  self->Component_TestCase_op_setUp( self,  thismodule);
+  /* IF ( self.name == testMethod ) */
+  XTUML_OAL_STMT_TRACE( 1, "IF ( self.name == testMethod )" );
+  if ( thismodule->Escher_strcmp( ((Component_TestCase *)xtUML_detect_empty_handle( self, "TestCase", "self.name" ))->name, "testMethod" ) == 0 ) {
+  }
+  else if ( thismodule->Escher_strcmp( ((Component_TestCase *)xtUML_detect_empty_handle( self, "TestCase", "self.name" ))->name, "brokenTestMethod" ) == 0 ) {
+  }
+  /* self.tearDown() */
+  XTUML_OAL_STMT_TRACE( 1, "self.tearDown()" );
+  self->Component_TestCase_op_tearDown( self,  thismodule);
 }
 
 /*
@@ -24,6 +35,15 @@ Component_TestCase::Component_TestCase_op_run( Component_TestCase * self, Compon
  */
 void
 Component_TestCase::Component_TestCase_op_setUp( Component_TestCase * self, Component * thismodule)
+{
+
+}
+
+/*
+ * instance operation:  tearDown
+ */
+void
+Component_TestCase::Component_TestCase_op_tearDown( Component_TestCase * self, Component * thismodule)
 {
 
 }

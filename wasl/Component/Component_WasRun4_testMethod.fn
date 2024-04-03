@@ -1,0 +1,9 @@
+define function WasRun4:testMethod
+input
+output 
+
+#$DESCRIPTION
+#$END_DESCRIPTION
+
+self.log = self.log + "testMethod ";
+enddefine

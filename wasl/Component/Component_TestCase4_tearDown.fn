@@ -1,4 +1,4 @@
-define scenario  Component_Scenario1
+define function TestCase4:tearDown
 input
 output 
 
