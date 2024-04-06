@@ -39,9 +39,8 @@ INSERT INTO S_SYNC
 	'createWasRun',
 	'',
 	'create object instance wr of WasRun;
-wr.name = "temp";
-wr.setUp();
-wr.run();',
+create object instance tc of TestCase;
+relate tc to wr across R3;',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
@@ -59,9 +58,7 @@ INSERT INTO S_SYNC
 	'createTestCase',
 	'',
 	'create object instance tc of TestCase;
-tc.name = "testMethod";
-tc.setUp();
-tc.run();',
+tc.name = "testMethod";',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
@@ -69,6 +66,24 @@ tc.run();',
 	3);
 INSERT INTO PE_PE
 	VALUES ("a071dfd3-aeb0-40c3-b3e0-20a3a8e3c6d8",
+	1,
+	"bb4060ca-60db-4b67-88b9-a767e88d5489",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("e13e6ffb-bc33-49e7-86b8-67a1e33df050",
+	"00000000-0000-0000-0000-000000000000",
+	'callInit',
+	'',
+	'select any wc from instances of WasRun;
+wc.idiot();',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0,
+	4);
+INSERT INTO PE_PE
+	VALUES ("e13e6ffb-bc33-49e7-86b8-67a1e33df050",
 	1,
 	"bb4060ca-60db-4b67-88b9-a767e88d5489",
 	"00000000-0000-0000-0000-000000000000",

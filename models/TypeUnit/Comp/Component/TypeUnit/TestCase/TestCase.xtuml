@@ -57,11 +57,60 @@ INSERT INTO O_TFR
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
-	3,
+	1,
 	'',
 	"13bd687d-bd84-4ad7-b985-79a6b67aecbc",
 	0,
 	4);
+INSERT INTO O_TFR
+	VALUES ("6153b440-4c85-48f8-bc9d-7eb33308c130",
+	"c3cea6f2-6706-4c01-bd9f-cfb21428d08d",
+	'init',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.name = param.name;',
+	0,
+	'',
+	"8c80fe5a-6e53-4772-a30e-b2ed3745c5cd",
+	0,
+	5);
+INSERT INTO O_TPARM
+	VALUES ("de6242d6-3535-4183-b660-8b5bfabab5f0",
+	"6153b440-4c85-48f8-bc9d-7eb33308c130",
+	'name',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_DEF
+	VALUES ("6153b440-4c85-48f8-bc9d-7eb33308c130",
+	"d22c80ba-4ba6-4828-94ce-ae769c41bce4",
+	0);
+INSERT INTO R_REL_PROXY
+	VALUES ("d22c80ba-4ba6-4828-94ce-ae769c41bce4",
+	3,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'../TypeUnit.xtuml');
+INSERT INTO O_TFR
+	VALUES ("bfef0b7d-2505-4e22-be65-cba7aeb2caa9",
+	"c3cea6f2-6706-4c01-bd9f-cfb21428d08d",
+	'idiot',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.name = "idiot";',
+	0,
+	'',
+	"6153b440-4c85-48f8-bc9d-7eb33308c130",
+	0,
+	6);
+INSERT INTO O_DEF
+	VALUES ("bfef0b7d-2505-4e22-be65-cba7aeb2caa9",
+	"d22c80ba-4ba6-4828-94ce-ae769c41bce4",
+	0);
 INSERT INTO O_NBATTR
 	VALUES ("2ec18765-75cb-4f32-a5fc-504e65fe0d04",
 	"c3cea6f2-6706-4c01-bd9f-cfb21428d08d");

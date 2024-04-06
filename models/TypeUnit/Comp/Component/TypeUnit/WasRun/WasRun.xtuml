@@ -65,6 +65,41 @@ INSERT INTO O_TFR
 	"5b926d75-4421-418b-913a-c7099af33fa3",
 	0,
 	5);
+INSERT INTO O_TFR
+	VALUES ("db5d130d-1aeb-421e-8c0a-f38ba78a55a5",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d",
+	'init',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.wasRun = false;',
+	1,
+	'',
+	"d62667e0-241f-4936-b768-efe195fab7c5",
+	0,
+	6);
+INSERT INTO O_TPARM
+	VALUES ("c6c6da45-c49c-4558-b540-d34aebeb95ca",
+	"db5d130d-1aeb-421e-8c0a-f38ba78a55a5",
+	'name',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("3d4d7fc3-7640-4f2b-bedd-62f339cd0240",
+	"eb13984d-bc2a-446d-9fc1-6c735620090d",
+	'idiot',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	1,
+	'',
+	"db5d130d-1aeb-421e-8c0a-f38ba78a55a5",
+	0,
+	7);
 INSERT INTO O_NBATTR
 	VALUES ("6dcf4b7c-8e8f-402e-ab41-b368eb083510",
 	"eb13984d-bc2a-446d-9fc1-6c735620090d");

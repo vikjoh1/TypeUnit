@@ -1,0 +1,65 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("803ec506-be01-4243-9ea0-3223fa979e05",
+	'TestCaseTest',
+	3,
+	'TestCaseTest',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("2787fce4-a4d4-4c94-8ce5-7b0c8c49727a",
+	"803ec506-be01-4243-9ea0-3223fa979e05",
+	'testRunning',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'create object instance tct of TestCaseTest;
+select any wr from instances of WasRun;
+',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	1);
+INSERT INTO O_NBATTR
+	VALUES ("a0dd9b0c-ff9f-49e7-af9f-38846da44449",
+	"803ec506-be01-4243-9ea0-3223fa979e05");
+INSERT INTO O_BATTR
+	VALUES ("a0dd9b0c-ff9f-49e7-af9f-38846da44449",
+	"803ec506-be01-4243-9ea0-3223fa979e05");
+INSERT INTO O_ATTR
+	VALUES ("a0dd9b0c-ff9f-49e7-af9f-38846da44449",
+	"803ec506-be01-4243-9ea0-3223fa979e05",
+	"00000000-0000-0000-0000-000000000000",
+	'test',
+	'',
+	'',
+	'test',
+	0,
+	"ba5eda7a-def5-0000-0000-00000000000d",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"803ec506-be01-4243-9ea0-3223fa979e05");
+INSERT INTO O_ID
+	VALUES (1,
+	"803ec506-be01-4243-9ea0-3223fa979e05");
+INSERT INTO O_ID
+	VALUES (2,
+	"803ec506-be01-4243-9ea0-3223fa979e05");
+INSERT INTO PE_PE
+	VALUES ("803ec506-be01-4243-9ea0-3223fa979e05",
+	1,
+	"78ec567f-1c2c-4c76-a0d8-279bfcd6f228",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("78ec567f-1c2c-4c76-a0d8-279bfcd6f228",
+	"00000000-0000-0000-0000-000000000000",
+	"3fb1e19e-15ec-4cf6-b9cd-c12bb3584d02",
+	'TypeUnit',
+	'',
+	0,
+	'../TypeUnit.xtuml');
