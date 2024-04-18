@@ -22,20 +22,119 @@ select any wr from instances of WasRun;
 	"00000000-0000-0000-0000-000000000000",
 	0,
 	1);
+INSERT INTO O_TFR
+	VALUES ("89654b81-f475-4332-a7b9-4e0ae4055be9",
+	"803ec506-be01-4243-9ea0-3223fa979e05",
+	'testResult',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'create object instance test of WasRun;
+test.init( name: "testMethod" );
+test.run(self.result);
+assert("1 run, 0 failed" == self.result.summary());',
+	1,
+	'',
+	"2787fce4-a4d4-4c94-8ce5-7b0c8c49727a",
+	0,
+	2);
+INSERT INTO O_TFR
+	VALUES ("a6e792a6-c6f3-4f93-9a8a-53f471b53577",
+	"803ec506-be01-4243-9ea0-3223fa979e05",
+	'testFailedResult',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'create object instance test of WasRun;
+test.init( name: "testBrokenMethod" );
+test.run(self.result);
+assert("1 run, 1 failed" == self.result.summary());',
+	1,
+	'',
+	"89654b81-f475-4332-a7b9-4e0ae4055be9",
+	0,
+	3);
+INSERT INTO O_TFR
+	VALUES ("98025dd4-0e96-425c-bb1d-33647d9dc1ba",
+	"803ec506-be01-4243-9ea0-3223fa979e05",
+	'testFailedResultFormatting',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.result.testStarted();
+self.result.testFailed();
+assert("1 run, 1 failed" == self.result.summary());',
+	1,
+	'',
+	"a6e792a6-c6f3-4f93-9a8a-53f471b53577",
+	0,
+	4);
+INSERT INTO O_TFR
+	VALUES ("f7bfeb08-1828-4475-8b13-0cd7a388eb7e",
+	"803ec506-be01-4243-9ea0-3223fa979e05",
+	'testSuite',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'create object instance ts of TestSuite;
+create object instance wr1 of WasRun;
+create object instance wr2 of WasRun;
+wr1.init( name: "testMethod" );
+ts.add(wr1);
+wr2.init( name: "testBrokenMethod" );
+ts.add(wr2);
+ts.run(self.result);
+assert("2 run, 1 failed" == self.result.summary());',
+	1,
+	'',
+	"98025dd4-0e96-425c-bb1d-33647d9dc1ba",
+	0,
+	5);
+INSERT INTO O_TFR
+	VALUES ("79581c89-c0b1-4099-a9b2-dfde1a9e7035",
+	"803ec506-be01-4243-9ea0-3223fa979e05",
+	'testTemplateMethod',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'create object instance test of WasRun;
+test.init( name: "testMethod" );
+test.run(self.result);
+assert("setUp testMethod tearDown " == test.log);',
+	1,
+	'',
+	"f7bfeb08-1828-4475-8b13-0cd7a388eb7e",
+	0,
+	6);
+INSERT INTO O_TFR
+	VALUES ("4162184d-8b42-437d-a41c-034cf3878d1a",
+	"803ec506-be01-4243-9ea0-3223fa979e05",
+	'setUp',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'create object instance result of TestResult;
+self.result = result;
+',
+	1,
+	'',
+	"79581c89-c0b1-4099-a9b2-dfde1a9e7035",
+	0,
+	7);
 INSERT INTO O_NBATTR
-	VALUES ("a0dd9b0c-ff9f-49e7-af9f-38846da44449",
+	VALUES ("abb720c5-633c-423b-bbea-3ba722f65ff9",
 	"803ec506-be01-4243-9ea0-3223fa979e05");
 INSERT INTO O_BATTR
-	VALUES ("a0dd9b0c-ff9f-49e7-af9f-38846da44449",
+	VALUES ("abb720c5-633c-423b-bbea-3ba722f65ff9",
 	"803ec506-be01-4243-9ea0-3223fa979e05");
 INSERT INTO O_ATTR
-	VALUES ("a0dd9b0c-ff9f-49e7-af9f-38846da44449",
+	VALUES ("abb720c5-633c-423b-bbea-3ba722f65ff9",
 	"803ec506-be01-4243-9ea0-3223fa979e05",
 	"00000000-0000-0000-0000-000000000000",
-	'test',
+	'result',
 	'',
 	'',
-	'test',
+	'result',
 	0,
 	"ba5eda7a-def5-0000-0000-00000000000d",
 	'',

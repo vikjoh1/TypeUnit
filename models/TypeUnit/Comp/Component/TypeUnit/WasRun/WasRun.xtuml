@@ -66,21 +66,21 @@ INSERT INTO O_TFR
 	0,
 	5);
 INSERT INTO O_TFR
-	VALUES ("db5d130d-1aeb-421e-8c0a-f38ba78a55a5",
+	VALUES ("3460ceab-ac94-48f2-b7bd-2f5b0dd82da5",
 	"eb13984d-bc2a-446d-9fc1-6c735620090d",
 	'init',
 	'',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
-	'self.wasRun = false;',
+	'self.name = param.name;',
 	1,
 	'',
 	"d62667e0-241f-4936-b768-efe195fab7c5",
 	0,
 	6);
 INSERT INTO O_TPARM
-	VALUES ("c6c6da45-c49c-4558-b540-d34aebeb95ca",
-	"db5d130d-1aeb-421e-8c0a-f38ba78a55a5",
+	VALUES ("4d3b2ee2-c08e-4d71-957d-45be9bddde7d",
+	"3460ceab-ac94-48f2-b7bd-2f5b0dd82da5",
 	'name',
 	"ba5eda7a-def5-0000-0000-000000000004",
 	0,
@@ -88,16 +88,16 @@ INSERT INTO O_TPARM
 	"00000000-0000-0000-0000-000000000000",
 	'');
 INSERT INTO O_TFR
-	VALUES ("3d4d7fc3-7640-4f2b-bedd-62f339cd0240",
+	VALUES ("483158bf-b0e0-4018-80a3-a06654233306",
 	"eb13984d-bc2a-446d-9fc1-6c735620090d",
-	'idiot',
+	'testBrokenMethod',
 	'',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
-	'',
+	'raise Exception;',
 	1,
 	'',
-	"db5d130d-1aeb-421e-8c0a-f38ba78a55a5",
+	"3460ceab-ac94-48f2-b7bd-2f5b0dd82da5",
 	0,
 	7);
 INSERT INTO O_NBATTR

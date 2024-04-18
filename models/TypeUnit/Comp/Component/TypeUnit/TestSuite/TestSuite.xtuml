@@ -1,0 +1,108 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa",
+	'TestSuite',
+	5,
+	'TestSuite',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("7f4bf6db-d521-44f4-8816-52c9999b7587",
+	"046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa",
+	'init',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.tests = [];',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	1);
+INSERT INTO O_TFR
+	VALUES ("92f9bd1c-36a9-4813-a0b9-2a42326060e9",
+	"046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa",
+	'add',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'self.tests.append(param.test);',
+	1,
+	'',
+	"7f4bf6db-d521-44f4-8816-52c9999b7587",
+	0,
+	2);
+INSERT INTO O_TPARM
+	VALUES ("d4bfb10f-ad3e-456a-9c52-9cabb9ea55f8",
+	"92f9bd1c-36a9-4813-a0b9-2a42326060e9",
+	'test',
+	"ba5eda7a-def5-0000-0000-00000000000d",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("95013b64-b1bc-49d8-89fe-28697d49e1be",
+	"046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa",
+	'run',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'for test in self.tests:
+	test.run(param.result);',
+	1,
+	'',
+	"92f9bd1c-36a9-4813-a0b9-2a42326060e9",
+	0,
+	3);
+INSERT INTO O_TPARM
+	VALUES ("01ed7648-78d9-4e4e-88cf-33af6e2adeef",
+	"95013b64-b1bc-49d8-89fe-28697d49e1be",
+	'result',
+	"ba5eda7a-def5-0000-0000-00000000000d",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("72cc1ebf-5370-4f2d-b868-d2a03bdcb593",
+	"046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa");
+INSERT INTO O_BATTR
+	VALUES ("72cc1ebf-5370-4f2d-b868-d2a03bdcb593",
+	"046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa");
+INSERT INTO O_ATTR
+	VALUES ("72cc1ebf-5370-4f2d-b868-d2a03bdcb593",
+	"046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa",
+	"00000000-0000-0000-0000-000000000000",
+	'tests',
+	'// should be an array',
+	'',
+	'tests',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa");
+INSERT INTO O_ID
+	VALUES (1,
+	"046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa");
+INSERT INTO O_ID
+	VALUES (2,
+	"046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa");
+INSERT INTO PE_PE
+	VALUES ("046dfd2f-0eb1-4405-b8bb-175e5c9ef8aa",
+	1,
+	"78ec567f-1c2c-4c76-a0d8-279bfcd6f228",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("78ec567f-1c2c-4c76-a0d8-279bfcd6f228",
+	"00000000-0000-0000-0000-000000000000",
+	"3fb1e19e-15ec-4cf6-b9cd-c12bb3584d02",
+	'TypeUnit',
+	'',
+	0,
+	'../TypeUnit.xtuml');
