@@ -76,7 +76,7 @@ private:
     TestResult result;
 
 public:
-    TestCaseTest(string name1) : TestCase(name1) {}
+    TestCaseTest(string name1) : TestCase(name1), result(name1) {}
 
     void testRunning()
     {
