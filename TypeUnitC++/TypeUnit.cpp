@@ -56,14 +56,17 @@ public:
 
     string summary()
     {
+        return "Tests run: " + to_string(runCount) + "Tests failed: " + to_string(errorCount);
     }
 
     void testStarted()
     {
+        this->runCount += 1;
     }
 
     void testFailed()
     {
+        this->errorCount += 1;
     }
 };
 
