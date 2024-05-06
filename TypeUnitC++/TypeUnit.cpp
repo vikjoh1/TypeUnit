@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 using namespace std;
 
 class TestCase
@@ -98,16 +99,19 @@ public:
 class TestSuite
 {
 private:
-    int tests; // I think we should switch this to be a "TestCase array"
+    vector<TestCase> tests;
 
 public:
-    TestSuite() {}
-
-    void add(TestCase test)
+    TestSuite()
     {
     }
 
-    void run(TestResult result) // I'm not sure how
+    void add(TestCase test)
+    {
+        tests.push_back(test);
+    }
+
+    void run(TestResult result)
     {
     }
 };
