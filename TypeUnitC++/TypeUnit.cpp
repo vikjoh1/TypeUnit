@@ -43,3 +43,62 @@ public:
     {
     }
 };
+
+class TestResult : public TestCase
+{
+private:
+    int runCount;
+    int errorCount;
+
+public:
+    TestResult() : runCount(0), errorCount(0) {}
+
+    string summary()
+    {
+        return "";
+    }
+
+    void testStarted()
+    {
+    }
+
+    void testFailed()
+    {
+    }
+};
+
+class TestCaseTest : public TestCase
+{
+private:
+    TestResult result;
+
+public:
+    TestCaseTest(string name1) : TestCase(name1)
+    {
+    }
+
+    string summary()
+    {
+        return "";
+    }
+
+    void testRunning()
+    {
+    }
+
+    void testResult()
+    {
+    }
+
+    void testFailedResult()
+    {
+    }
+
+    void testFailedResultFormatting()
+    {
+    }
+
+    void testSuite()
+    {
+    }
+};
