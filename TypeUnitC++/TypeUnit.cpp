@@ -51,11 +51,10 @@ private:
     int errorCount;
 
 public:
-    TestResult() : runCount(0), errorCount(0) {}
+    TestResult(string name) : TestCase(name), runCount(0), errorCount(0) {}
 
     string summary()
     {
-        return "";
     }
 
     void testStarted()
@@ -73,14 +72,7 @@ private:
     TestResult result;
 
 public:
-    TestCaseTest(string name1) : TestCase(name1)
-    {
-    }
-
-    string summary()
-    {
-        return "";
-    }
+    TestCaseTest(string name1) : TestCase(name1) {}
 
     void testRunning()
     {
@@ -99,6 +91,23 @@ public:
     }
 
     void testSuite()
+    {
+    }
+};
+
+class TestSuite
+{
+private:
+    int tests; // I think we should switch this to be a "TestCase array"
+
+public:
+    TestSuite() {}
+
+    void add(TestCase test)
+    {
+    }
+
+    void run(TestResult result) // I'm not sure how
     {
     }
 };
