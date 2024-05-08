@@ -1,6 +1,4 @@
 #include "TestCase.h"
-#include "TestResult.h"
-#include <functional>
 
 void TestCase::setUp()
 {
