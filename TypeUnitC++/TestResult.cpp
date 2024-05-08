@@ -4,7 +4,7 @@ TestResult::TestResult(std::string name) : TestCase(name), runCount(0), errorCou
 
 std::string TestResult::summary()
 {
-    return "Tests run: " + std::to_string(runCount) + "Tests failed: " + std::to_string(errorCount);
+    return std::to_string(runCount) + " run, " + std::to_string(errorCount) + " failed";
 }
 
 void TestResult::testStarted()
