@@ -2,27 +2,44 @@
 
 TestCaseTest::TestCaseTest(std::string name) : TestCase(name), result(name) {}
 
-void TestCaseTest::testRunning()
+void TestCaseTest::setUp()
 {
-    // Implementation for testRunning
+    result = new TestResult();
+}
+
+void TestCaseTest::testTemplateMethod()
+{
+    WasRun test("testMethod");
+    test.run(*result);
+    assert("setUp testMethod tearDown " == test.log);
 }
 
 void TestCaseTest::testResult()
 {
-    // Implementation for testResult
+    WasRun test("testMethod");
+    test.run(*result);
+    assert("1 run, 0 failed" == result->summary());
 }
 
 void TestCaseTest::testFailedResult()
 {
-    // Implementation for testFailedResult
+    WasRun test("testBrokenMethod");
+    test.run(*result);
+    assert("1 run, 1 failed" == result->summary());
 }
 
 void TestCaseTest::testFailedResultFormatting()
 {
-    // Implementation for testFailedResultFormatting
+    result->testStarted();
+    result->testFailed();
+    assert("1 run, 1 failed" == result->summary());
 }
 
 void TestCaseTest::testSuite()
 {
-    // Implementation for testSuite
+    TestSuite suite;
+    suite.add(new WasRun("testMethod"));
+    suite.add(new WasRun("testBrokenMethod"));
+    suite.run(*result);
+    assert("2 run, 1 failed" == result->summary());
 }
