@@ -10,5 +10,5 @@ private:
 public:
     TestSuite();
     void add(TestCase *test);
-    void run(TestResult *result);
+    void run(TestResult &result);
 };
