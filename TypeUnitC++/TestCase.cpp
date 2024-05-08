@@ -1,4 +1,6 @@
 #include "TestCase.h"
+#include "TestResult.h"
+#include <functional>
 
 void TestCase::setUp()
 {
@@ -12,7 +14,23 @@ void TestCase::tearDown()
 
 TestCase::TestCase(std::string name) : name(name) {}
 
-void TestCase::run()
+void TestCase::run(TestResult &result)
 {
-    // Implementation for run
+    result.testStarted();
+    this->setUp();
+    try
+    {
+        auto method = methods.at(name);
+        (this->*method)();
+    }
+    catch (const std::exception &e)
+    {
+        result.testFailed();
+    }
+    this->tearDown();
+}
+
+void TestCase::registerTest(std::string name, Method method)
+{
+    methods[name] = method;
 }
