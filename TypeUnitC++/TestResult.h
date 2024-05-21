@@ -1,14 +1,20 @@
-#include "TestCase.h"
+#ifndef TESTRESULT_H
+#define TESTRESULT_H
 
-class TestResult : public TestCase
+#include <string>
+#include <iostream>
+
+class TestResult
 {
 private:
     int runCount;
     int errorCount;
 
 public:
-    TestResult(std::string name);
+    TestResult() : runCount(0), errorCount(0){};
     std::string summary();
     void testStarted();
     void testFailed();
 };
+
+#endif // TESTRESULT_H

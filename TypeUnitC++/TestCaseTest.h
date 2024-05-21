@@ -1,7 +1,11 @@
+#ifndef TESTCASETEST_H
+#define TESTCASETEST_H
+
 #include "TestCase.h"
 #include "TestResult.h"
 #include "TestSuite.h"
 #include "WasRun.h"
+#include <cassert>
 
 class TestCaseTest : public TestCase
 {
@@ -9,7 +13,6 @@ private:
     TestResult result;
 
 public:
-    TestCaseTest(std::string name);
     void setUp() override;
     void testResult();
     void testTemplateMethod();
@@ -17,3 +20,5 @@ public:
     void testFailedResultFormatting();
     void testSuite();
 };
+
+#endif // TESTCASETEST_H

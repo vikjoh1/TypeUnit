@@ -1,7 +1,5 @@
 #include "TestCaseTest.h"
 
-TestCaseTest::TestCaseTest(std::string name) : TestCase(name), result(name) {}
-
 void TestCaseTest::setUp()
 {
     result = new TestResult();

@@ -3,15 +3,28 @@
 
 #include <string>
 #include <sstream>
+#include <vector>
 
 class SuiteResult
 {
 public:
-  int testsFailed = 0;
-  int testsRun = 0;
+  struct TestInfo
+  {
+    std::string testName;
+    bool passed;
+    std::string message;
+  };
+  int errorCount = 0;
+  int runCount = 0;
+  std::vector<std::string> errorMessages;
+  std::vector<TestInfo> tests;
+
+  void addTestResult(const std::string &name, bool passed, const std::string &message = "");
 
   void testStarted();
-  void testFailed();
+  void testFailed(const std::string &message);
+
+  bool hasFailed() const;
 
   std::string summary() const;
 };

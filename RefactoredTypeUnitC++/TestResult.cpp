@@ -4,10 +4,17 @@
 std::string TestResult::summary() const
 {
   std::stringstream ss;
-  ss << runCount << " run, " << errorCount << " failed\n";
-  for (const auto &message : errorMessages)
+  ss << runCount << " tests run, " << errorCount << " tests failed\n";
+  for (const auto test : tests)
   {
-    ss << "Error: " << message << "\n";
+    if (test.passed)
+    {
+      ss << "\033[32m✔ " << test.testName << "\033[0m\n";
+    }
+    else
+    {
+      ss << "\033[31m✘ " << test.testName << " - " << test.message << "\033[0m\n";
+    }
   }
   return ss.str();
 }
@@ -26,4 +33,14 @@ void TestResult::testFailed(const std::string &message)
 bool TestResult::hasFailed() const
 {
   return errorCount > 0;
+}
+
+void TestResult::addTestResult(const std::string &name, bool passed, const std::string &message = "")
+{
+  tests.push_back({name, passed, message});
+  runCount++;
+  if (!passed)
+  {
+    errorCount++;
+  }
 }

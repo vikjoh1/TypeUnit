@@ -1,7 +1,5 @@
 #include "TestResult.h"
 
-TestResult::TestResult(std::string name) : TestCase(name), runCount(0), errorCount(0) {}
-
 std::string TestResult::summary()
 {
     return std::to_string(runCount) + " run, " + std::to_string(errorCount) + " failed";
@@ -9,10 +7,10 @@ std::string TestResult::summary()
 
 void TestResult::testStarted()
 {
-    this->runCount += 1;
+    runCount++;
 }
 
 void TestResult::testFailed()
 {
-    this->errorCount += 1;
+    errorCount++;
 }
