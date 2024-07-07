@@ -10,10 +10,12 @@
 class TestCaseTest : public TestCase
 {
 private:
-    TestResult result;
+    TestResult *result;
 
 public:
+    TestCaseTest(const std::string &name) : TestCase(name), result(nullptr) {}
     void setUp() override;
+    void tearDown() override;
     void testResult();
     void testTemplateMethod();
     void testFailedResult();

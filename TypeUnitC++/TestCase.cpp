@@ -16,10 +16,7 @@ void TestCase::run(TestResult &result)
     setUp();
     try
     {
-        if (testMethod)
-        {
-            testMethod();
-        }
+        runTestMethod();
     }
     catch (const std::exception &e)
     {

@@ -1,6 +1,7 @@
 #include "TestSuite.h"
 #include "WasRun.h"
 #include "TestResult.h"
+#include "TestCaseTest.h"
 #include <iostream>
 
 int main()

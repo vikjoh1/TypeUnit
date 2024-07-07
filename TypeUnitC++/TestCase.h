@@ -9,7 +9,6 @@ class TestCase
 {
 
 public:
-    std::function<void()> testMethod;
     std::string name;
 
     TestCase(const std::string &name) : name(name){};
@@ -19,6 +18,7 @@ public:
 protected:
     virtual void setUp();
     virtual void tearDown();
+    virtual void runTestMethod() = 0;
 };
 
 #endif // TESTCASE_H

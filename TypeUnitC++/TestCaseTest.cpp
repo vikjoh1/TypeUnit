@@ -5,24 +5,30 @@ void TestCaseTest::setUp()
     result = new TestResult();
 }
 
+void TestCaseTest::tearDown()
+{
+    delete result;
+    result = nullptr;
+}
+
 void TestCaseTest::testTemplateMethod()
 {
     WasRun test("testMethod");
-    test.run(*result);
+    test.run();
     assert("setUp testMethod tearDown " == test.log);
 }
 
 void TestCaseTest::testResult()
 {
     WasRun test("testMethod");
-    test.run(*result);
+    test.run();
     assert("1 run, 0 failed" == result->summary());
 }
 
 void TestCaseTest::testFailedResult()
 {
     WasRun test("testBrokenMethod");
-    test.run(*result);
+    test.run();
     assert("1 run, 1 failed" == result->summary());
 }
 
@@ -36,8 +42,10 @@ void TestCaseTest::testFailedResultFormatting()
 void TestCaseTest::testSuite()
 {
     TestSuite suite;
-    suite.add(new WasRun("testMethod"));
-    suite.add(new WasRun("testBrokenMethod"));
+    WasRun test1("testMethod");
+    WasRun test2("testBrokenMethod");
+    suite.add(&test1);
+    suite.add(&test2);
     suite.run(*result);
     assert("2 run, 1 failed" == result->summary());
 }

@@ -10,15 +10,29 @@ void WasRun::tearDown()
     log += "tearDown ";
 }
 
-void WasRun::run()
+void WasRun::testMethod()
 {
-    if (testMethod)
-    {
-        testMethod();
-    }
+    log += "testMethod ";
 }
 
 void WasRun::testBrokenMethod()
 {
     throw std::runtime_error("Exception occurred in testBrokenMethod");
+}
+
+void WasRun::run()
+{
+    if (name == "testMethod")
+    {
+        testMethod();
+    }
+    else if (name == "testBrokenMethod")
+    {
+        testBrokenMethod();
+    }
+}
+
+void WasRun::runTestMethod()
+{
+    this->run();
 }
